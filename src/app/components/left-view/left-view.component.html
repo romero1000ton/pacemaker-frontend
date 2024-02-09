@@ -1,0 +1,17 @@
+<article class="left-view">
+  <section *ngIf="!selectedImage" class="left-view-upload-section" (click)="fileInput.click()">
+    <img [src]="UPLOAD_IMAGE_PATH" alt="Upload Icon"/>
+
+    <input #fileInput class="left-view-upload" type="file" (change)="onFileSelected($event)"/>
+  </section>
+
+  <section *ngIf="!!selectedImage" class="left-view-upload-section">
+    <img [src]="selectedImage" alt="Upload Icon"/>
+  </section>
+
+  <section class="left-view-footer">
+    <button class="left-view-footer-clear" (click)="clearImage()">Clear</button>
+
+    <button class="left-view-footer-predict" (click)="predict()">Predict</button>
+  </section>
+</article>

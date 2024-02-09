@@ -1,0 +1,7 @@
+<article class="right-view" *ngIf="predictionResults">
+  <label for="progress"></label>
+  <progress id="progress" class="right-view-bar" [value]="predictionResults.confidence" max="100"></progress>
+
+  <label class="right-view-confidence">Confidence level: {{ predictionResults.confidence }}%</label>
+  <label class="right-view-class">Manufacturer: {{ predictionResults.predicted_class }}</label>
+</article>

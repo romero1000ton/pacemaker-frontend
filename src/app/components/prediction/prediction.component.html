@@ -1,0 +1,17 @@
+<article class="prediction-view">
+  <section class="prediction-view-left">
+    <label class="prediction-view-left-title">{{ LEFT_TITLE }}</label>
+
+    <section class="prediction-view-left-content">
+      <app-left-view (uploadImage)="selectedFile($event)" (clear)="onClear()"></app-left-view>
+    </section>
+  </section>
+
+  <section class="prediction-view-right">
+    <label class="prediction-view-right-title">{{ RIGHT_TITLE }}</label>
+
+    <section class="prediction-view-right-content">
+      <app-right-view [predictionResults]="predictionResults"></app-right-view>
+    </section>
+  </section>
+</article>
